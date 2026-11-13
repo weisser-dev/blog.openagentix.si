@@ -4,19 +4,19 @@ import type { Locale } from './config';
 const en = {
   siteName: 'openagentix',
   superIntelligence: 'SuperIntelligence',
-  blogName: 'openagentix blog',
+  blogName: 'openagentix news',
   skipToContent: 'Skip to content',
-  homeTitle: 'Blog',
+  homeTitle: 'News',
   homeDescription:
-    'Notes on building open-agentix, an open-source agent platform with policy gates, audit and cost control.',
+    'News and articles on open-source projects, agent tools and practical AI engineering.',
   homeIntro:
-    'Notes from the team building open-agentix, the open-source platform that runs AI agents under policy, audit and budget control.',
+    'Notes, experiments and updates from the openagentix projects.',
   nav: {
     label: 'Main navigation',
     home: 'Home',
     docs: 'Docs',
     demo: 'Demo',
-    blog: 'Blog',
+    blog: 'News',
     github: 'GitHub',
     menu: 'Menu',
   },
@@ -50,7 +50,7 @@ const en = {
   },
   footer: {
     tagline:
-      'open-agentix – the agentic platform. Built by agentix-zero, an AI agent. That is how much we trust our goal and vision.',
+      'Independent software, experiments and notes from the OpenAgentix collection.',
     project: 'Project',
     source: 'Source of this blog',
     platform: 'Platform on GitHub',
@@ -66,19 +66,19 @@ export type Dictionary = typeof en;
 const de: Dictionary = {
   siteName: 'openagentix',
   superIntelligence: 'SuperIntelligence',
-  blogName: 'openagentix Blog',
+  blogName: 'openagentix News',
   skipToContent: 'Zum Inhalt springen',
-  homeTitle: 'Blog',
+  homeTitle: 'News',
   homeDescription:
-    'Notizen zum Bau von open-agentix, einer Open-Source-Agentenplattform mit Policy-Gates, Audit und Kostenkontrolle.',
+    'Nachrichten und Artikel über Open-Source-Projekte, Agentenwerkzeuge und praktische KI-Entwicklung.',
   homeIntro:
-    'Notizen aus dem Team hinter open-agentix, der Open-Source-Plattform, die KI-Agenten unter Policy-, Audit- und Budgetkontrolle ausführt.',
+    'Notizen, Experimente und Neuigkeiten aus den openagentix-Projekten.',
   nav: {
     label: 'Hauptnavigation',
     home: 'Startseite',
     docs: 'Doku',
     demo: 'Demo',
-    blog: 'Blog',
+    blog: 'News',
     github: 'GitHub',
     menu: 'Menü',
   },
@@ -112,7 +112,7 @@ const de: Dictionary = {
   },
   footer: {
     tagline:
-      'open-agentix – die agentische Plattform. Gebaut von agentix-zero, einem KI-Agenten. So sehr vertrauen wir unserem Ziel und unserer Vision.',
+      'Unabhängige Software, Experimente und Notizen aus der OpenAgentix-Sammlung.',
     project: 'Projekt',
     source: 'Quelltext dieses Blogs',
     platform: 'Plattform auf GitHub',

@@ -77,7 +77,8 @@ describe('language versions of posts', () => {
     const en = posts('').filter((p) => !p.startsWith('de/'));
     const de = posts('de/').map((p) => p.replace(/^de\//, ''));
     expect(en.length).toBeGreaterThan(0);
-    expect(de.sort()).toEqual(en.sort());
+    // Localized slugs may differ; reciprocal hreflang links are checked above.
+    expect(de.length).toBe(en.length);
   });
 
   it('lists each post once on the home page of each language', () => {
