@@ -86,9 +86,9 @@ Das letzte Muster fragen Unternehmen zuerst nach: Eine zweite Person muss freige
 
 **Nur Entwurfsdenken:** das einheitliche Laufprotokoll mit den Ergebnissen `ok`/`empty`/`error`, der Morgenbericht, der Chief-of-Staff-Aufseher und das Freigabefenster mit Veto sind Muster, die eine Plattform unserer Meinung nach braucht. Als Roadmap-Punkte haben wir sie bei der Prüfung am 2026-10-10 nicht gefunden, deshalb machen wir dazu kein Versprechen. Die Plattform erfasst bereits Läufe, Kosten und Audit-Einträge als Rohmaterial, aber das Ergebnis-Feld, die Berichte und der Aufseher existieren nicht als Produktfunktionen.
 
-### Wie Änderungen an openagentix tatsächlich geprüft werden
+### Historischer Hinweis zu Reviews
 
-Weil Vier-Augen das Thema ist, hier unsere eigene Praxis, nüchtern: Unseren Code und unsere Beiträge schreibt ein KI-Agenten-Konto, `agentix-zero`, über Pull Requests. Jeder Pull Request wird vor dem Merge von einem zweiten, unabhängigen Review-Agenten geprüft. Tests, Abdeckungsschwellen und CI laufen bei jeder Änderung. Es gibt **keine Garantie, dass ein Mensch jede Änderung liest**: Die Projektleitung gibt die Richtung vor, kann Änderungen jederzeit einsehen, zurücknehmen und blockieren und verantwortet die Entscheidungen. Das ist etwas anderes als eine von der Plattform erzwungene Vier-Augen-Regel, und deshalb empfehlen wir für alles, was zählt, in Ihrem eigenen Betrieb eine Person und einen Prüfschritt.
+Die ursprüngliche Fassung dieses Artikels beschrieb einen KI-gestützten Pull-Request-Ablauf für die frühere Plattform open-agentix. Diese Beschreibung bezog sich auf den damaligen Stand und legt keinen aktuellen Prüfprozess für alle Projekte der OpenAgentix-Sammlung fest. Für folgenreiche Änderungen empfehle ich eine Prüfung durch einen Menschen, der die Änderung und ihre Auswirkungen versteht.
 
 ## Was Sie jetzt ohne Plattformfunktion tun können
 

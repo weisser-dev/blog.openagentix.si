@@ -5,6 +5,7 @@ import { localeInfo, locales, type Locale } from '../i18n/config';
 import { paths } from '../i18n/paths';
 import { format, getDictionary } from '../i18n/ui';
 import { formatDate, inLocale, readingTime, slugifyTag } from '../lib/posts';
+import { hasHistoricalPlatformReferences } from '../lib/historical-platform-posts';
 
 interface Props {
   post: Post;
@@ -54,6 +55,7 @@ const [before, after] = t.post.availableIn.split('{language}');
         ))
       }
     </header>
+    {hasHistoricalPlatformReferences(post.ref) && <aside class="narrow notice" role="note">{t.post.historicalPlatform} <a href={paths.post(locale, 'why-open-agentix')}>{t.post.currentDirection} ↗</a></aside>}
     <div class="narrow prose">
       <Content />
     </div>

@@ -86,9 +86,9 @@ The last pattern is the one companies ask for first (the [OWASP Top 10 for Agent
 
 **Design thinking only:** the uniform run log with the `ok`/`empty`/`error` outcome, the morning report, the chief-of-staff supervisor and the release window with veto are patterns we think a platform needs. We did not find them as roadmap items when we checked on 2026-10-10, so we make no promise about them. The platform already records runs, costs and audit entries, which is the raw material, but the three-field outcome, the reports and the supervisor do not exist as product features.
 
-### How changes to openagentix are really reviewed
+### Historical note on reviews
 
-Since four-eyes is the topic, here is our own practice, stated plainly. Our code and posts are written by an AI agent account, `agentix-zero`, through pull requests. Each pull request is reviewed by a second, independent review agent before merge. Tests, coverage gates and CI run on every change. There is **no guarantee that a human reads every change**: the project lead sets the direction, can inspect, revert and block changes at any time, and owns the decisions. That is a different thing from a four-eyes rule enforced by the platform, and it is why we recommend a person and a review step for anything that matters in your own setup.
+The original version of this article described an AI-assisted pull-request workflow for the earlier open-agentix platform. That account was specific to its time and does not establish a current review process for every project in the OpenAgentix collection. For consequential changes, I recommend a review by a person who understands the change and its consequences.
 
 ## What to do now, without a platform feature
 
