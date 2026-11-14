@@ -394,3 +394,6 @@ main:focus {
 :root:not([data-theme='light']) .i-sun {
   display: none;
 }
+
+/* Keep long URLs, code and tables readable on narrow screens. */
+.prose a{overflow-wrap:anywhere}.prose table{display:block;max-width:100%;overflow-x:auto}.prose img{height:auto;border-radius:var(--radius-m)}.post-neighbors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;margin:2rem 0}.post-neighbors a{display:grid;gap:.35rem;padding:1rem;border:1px solid var(--border);border-radius:var(--radius-m);text-decoration:none;color:var(--text);overflow-wrap:anywhere}.post-neighbors a:hover{border-color:var(--accent)}.post-neighbors small{color:var(--text-muted)}@media(max-width:600px){.post-neighbors{grid-template-columns:1fr}}
