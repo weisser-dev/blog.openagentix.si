@@ -10,7 +10,7 @@ const en = {
   homeDescription:
     'News and articles on open-source projects, agent tools and practical AI engineering.',
   homeIntro:
-    'Notes, experiments and updates from the openagentix projects.',
+    'Private, non-commercial open-source projects and notes about AI and agents by weisser-dev.',
   nav: {
     label: 'Main navigation',
     home: 'Home',
@@ -50,7 +50,7 @@ const en = {
   },
   footer: {
     tagline:
-      'Independent software, experiments and notes from the OpenAgentix collection.',
+      'A private, non-commercial collection of open-source AI projects and writing by weisser-dev.',
     project: 'Project',
     source: 'Source of this blog',
     platform: 'Platform on GitHub',
@@ -72,7 +72,7 @@ const de: Dictionary = {
   homeDescription:
     'Nachrichten und Artikel über Open-Source-Projekte, Agentenwerkzeuge und praktische KI-Entwicklung.',
   homeIntro:
-    'Notizen, Experimente und Neuigkeiten aus den openagentix-Projekten.',
+    'Private, nicht kommerzielle Open-Source-Projekte und Notizen über KI und Agenten von weisser-dev.',
   nav: {
     label: 'Hauptnavigation',
     home: 'Startseite',
@@ -112,7 +112,7 @@ const de: Dictionary = {
   },
   footer: {
     tagline:
-      'Unabhängige Software, Experimente und Notizen aus der OpenAgentix-Sammlung.',
+      'Eine private, nicht kommerzielle Sammlung offener KI-Projekte und Texte von weisser-dev.',
     project: 'Projekt',
     source: 'Quelltext dieses Blogs',
     platform: 'Plattform auf GitHub',

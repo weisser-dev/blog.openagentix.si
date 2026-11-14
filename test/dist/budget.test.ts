@@ -27,11 +27,15 @@ describe('performance budget', () => {
   const screenshot = /^images\/blog\/[a-z0-9-]+-\d+\.png$/;
 
   it('ships no raster images except the social card and the blog screenshots', () => {
-    expect([...files].filter((f) => forbiddenImage.test(f) && f !== 'og.png' && !screenshot.test(f))).toEqual([]);
+    expect([...files].filter((f) => forbiddenImage.test(f) && f !== 'og.png' && f !== 'images/blog/wearable-agents-cover.jpg' && !screenshot.test(f))).toEqual([]);
   });
 
   it('keeps every blog screenshot under 250 KB', () => {
     for (const f of [...files].filter((f) => screenshot.test(f))) expect(readBytes(f).length).toBeLessThan(250 * 1024);
+  });
+
+  it('keeps the wearable illustration under 250 KB', () => {
+    expect(readBytes('images/blog/wearable-agents-cover.jpg').length).toBeLessThan(250 * 1024);
   });
 
   it('ships the social card at a sensible size', () => {

@@ -61,7 +61,7 @@ const [before, after] = t.post.availableIn.split('{language}');
       <ul class="tag-list" aria-label={t.post.tags}>
         {post.tags.map((tag) => <li><a class="tag" href={paths.tag(locale, slugifyTag(tag))}>{tag}</a></li>)}
       </ul>
-      <p>{t.post.agentNote} {t.post.license}</p>
+      <p>{post.author === 'agentix-zero' && t.post.agentNote} {t.post.license}</p>
       <p><a href={paths.home(locale)}>&larr; {t.post.backToAll}</a></p>
     </footer>
   </article>
