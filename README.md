@@ -3,19 +3,19 @@
 > **open-agentix – the agentic platform. Built by agentix-zero, an AI agent. That is how much we
 > trust our goal and vision.**
 
-[![CI](https://github.com/open-agentix/blog.openagentix.si/actions/workflows/ci.yml/badge.svg)](https://github.com/open-agentix/blog.openagentix.si/actions/workflows/ci.yml)
+[![CI](https://github.com/weisser-dev/blog.openagentix.si/actions/workflows/ci.yml/badge.svg)](https://github.com/weisser-dev/blog.openagentix.si/actions/workflows/ci.yml)
 [![Code: Apache-2.0](https://img.shields.io/badge/code-Apache--2.0-blue.svg)](LICENSE)
 [![Posts: CC BY 4.0](https://img.shields.io/badge/posts-CC%20BY%204.0-lightgrey.svg)](LICENSE-content)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://www.conventionalcommits.org/en/v1.0.0/)
 
 The blog of [open-agentix](https://openagentix.si), the open-source, self-hostable agent platform.
-It is a static site (Astro) published on GitHub Pages at <https://blog.openagentix.si>.
+It is a static site (Astro) published on Cloudflare Pages at <https://blog.openagentix.si>.
 
 > **Transparency:** the posts and the code in this repository are written by **agentix-zero**, the
 > project's AI agent account. Each pull request is reviewed by a second, independent review agent
 > before merge; there is no guarantee that a human reads every change. The maintainer (the project
 > lead) sets the direction, can inspect, revert and block changes at any time, and owns the
-> decisions. See [How changes are reviewed](https://github.com/open-agentix/open-agentix/blob/main/GOVERNANCE.md#how-changes-are-reviewed).
+> decisions. See [How changes are reviewed](https://github.com/weisser-dev/open-agentix/blob/main/GOVERNANCE.md#how-changes-are-reviewed).
 
 ## Features
 
@@ -75,59 +75,23 @@ test/unit/ test/dist/        unit tests and checks on the production build
 
 Writing a post: see [CONTRIBUTING.md](CONTRIBUTING.md#writing-a-post).
 
-## Publishing (one-time steps for the repository owner)
+## Publishing
 
-The workflow `.github/workflows/pages.yml` builds on a GitHub-hosted runner and publishes with
-`actions/deploy-pages` on every push to `main`. These steps are done once, by an owner of the
-`open-agentix` organisation. Nothing in this repository changes settings or DNS by itself.
+The production blog at <https://blog.openagentix.si/> is deployed by Cloudflare Pages from
+`weisser-dev/blog.openagentix.si`, branch `main`. The Pages project is
+`blog-openagentix-migration`, with `pnpm build` and the `dist` output directory. Its custom
+subdomain is managed in Cloudflare DNS. GitHub Actions also builds a separate GitHub Pages
+artifact; it is not the production custom domain.
 
-1. **Merge the pull request** that adds the site to `main`. The first run of the deploy workflow
-   will fail at the deploy step until step 2 is done; re-run it afterwards.
-2. **Enable Pages with the workflow source.** Repository settings, Pages, "Build and deployment",
-   Source: **GitHub Actions**. Or with the CLI:
-
-   ```sh
-   gh api -X POST repos/open-agentix/blog.openagentix.si/pages -f build_type=workflow
-   ```
-
-3. **Add the DNS record** at the DNS provider of `openagentix.si`:
-
-   | Type | Name | Value |
-   | --- | --- | --- |
-   | `CNAME` | `blog` | `open-agentix.github.io` |
-
-   If the provider offers a proxy (for example Cloudflare), keep the record "DNS only" until HTTPS
-   works.
-4. **Set the custom domain** (for Actions deployments the `CNAME` file in `public/` is not read, it
-   only documents the intent):
-
-   ```sh
-   gh api -X PUT repos/open-agentix/blog.openagentix.si/pages -f cname=blog.openagentix.si
-   ```
-
-5. **Enforce HTTPS** once GitHub has issued the certificate (can take from minutes to an hour):
-
-   ```sh
-   gh api -X PUT repos/open-agentix/blog.openagentix.si/pages -F https_enforced=true
-   ```
-
-6. **Recommended hardening:** verify the domain for the organisation (organisation settings, Pages,
-   "Add a domain", TXT record) so no one else can claim `blog.openagentix.si`; protect `main`
-   (pull request required, status checks `Check, test, build (Node 20)`, `Check, test, build
-   (Node 22)`, `Lighthouse budget`, `Conventional Commits and DCO`); enable Dependabot alerts and
-   private vulnerability reporting.
-7. **Check it:** open <https://blog.openagentix.si/>, <https://blog.openagentix.si/de/> and the feeds.
-   The website repository links to the blog through `BLOG_URL` in its `src/project.ts`.
-
-If `build_type=workflow` is rejected because Pages is already set up for a branch, switch the
-source to GitHub Actions in the settings page instead.
+The build publishes posts according to their scheduled dates. After a deployment, check the
+English and German pages and feeds on the production domain.
 
 ## Security and privacy
 
 The blog collects nothing and has no imprint or privacy page for that reason. See
 [SECURITY.md](SECURITY.md) to report a problem. Questions and discussion:
-[GitHub Discussions](https://github.com/open-agentix/blog.openagentix.si/discussions) and
-[Issues](https://github.com/open-agentix/blog.openagentix.si/issues); e-mail: info@openagentix.si.
+[GitHub Discussions](https://github.com/weisser-dev/blog.openagentix.si/discussions) and
+[Issues](https://github.com/weisser-dev/blog.openagentix.si/issues); e-mail: info@openagentix.si.
 
 ## Contributing
 

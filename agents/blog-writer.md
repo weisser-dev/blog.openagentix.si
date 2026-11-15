@@ -382,7 +382,7 @@ unless noted):
 
 | Connection | Profile or tools | Purpose |
 | --- | --- | --- |
-| `workspace` | `list_files`, `read_file`, `write_file`, `edit_file`, `diff` | checkout of this repository in the run node ([workspace tools](https://github.com/open-agentix/open-agentix/blob/main/docs/workspace-tools.md)) |
+| `workspace` | `list_files`, `read_file`, `write_file`, `edit_file`, `diff` | checkout of this repository in the run node ([workspace tools](https://github.com/weisser-dev/open-agentix/blob/main/docs/workspace-tools.md)) |
 | `blog-tools` | `next_slot` (read), `run_checks` (write) | two fixed commands without arguments: `node scripts/next-slot.mjs --json` and `pnpm verify` |
 | `web-read` | profile `read` | search and fetch, read-only, restricted to the egress allowlist above |
 | `github-read` | profile `read` | read-only access to `open-agentix/open-agentix` (`ROADMAP.md`, `CHANGELOG.md`) |

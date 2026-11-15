@@ -5,13 +5,13 @@
 **Please do not open public issues for security problems.**
 
 Report privately through
-[GitHub Security Advisories](https://github.com/open-agentix/blog.openagentix.si/security/advisories/new)
+[GitHub Security Advisories](https://github.com/weisser-dev/blog.openagentix.si/security/advisories/new)
 ("Report a vulnerability"); please do not report vulnerabilities by e-mail. Include the affected page or file, a
 description, steps to reproduce and the impact you expect. We acknowledge reports within 3 working
 days and coordinate disclosure with you.
 
 Vulnerabilities in the platform itself belong to the
-[platform repository](https://github.com/open-agentix/open-agentix/security/advisories/new).
+[platform repository](https://github.com/weisser-dev/open-agentix/security/advisories/new).
 
 ## Scope
 
